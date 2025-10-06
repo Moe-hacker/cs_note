@@ -28,7 +28,9 @@ The ER model uses specific symbols to represent its components in diagrams:
 - **Diamond (菱形):** Represents a relationship between entities.
 - **Double Diamond (双菱形):** Represents an identifying relationship, which connects a weak entity to its related strong entity.
 - **Dotted Oval (虚线椭圆):** Represents a derived attribute, which can be calculated from other attributes.
-- **Lines (线):** Connect entities to their attributes and relationships, indicating associations.
+- **Lines (线):** Connect Participation in relationships.
+  - **Single Line (单线):** Connects Partial Participation, indicating that some instances of an entity may not participate in the relationship.
+  - **Double Lines (双线):** Connect Total Participation, indicating that all instances of an entity must participate in the relationship.
 
 # Entity-Relationship Diagram (ER图)
 
