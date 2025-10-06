@@ -1,52 +1,83 @@
 # Number Systems (数制)
-Number systems are a way of expressing numbers in different bases. The most common number systems are:
-- Decimal (十进制): Base 10, uses digits 0-9.
-- Binary (二进制): Base 2, uses digits 0-1.
-- Octal (八进制): Base 8, uses digits 0-7.
-- Hexadecimal (十六进制): Base 16, uses digits 0-9 and letters A-F.
+
+Number systems express numbers in different bases. The most common are:
+
+- **Decimal (十进制):** Base 10, digits 0–9
+- **Binary (二进制):** Base 2, digits 0–1
+- **Octal (八进制):** Base 8, digits 0–7
+- **Hexadecimal (十六进制):** Base 16, digits 0–9 and A–F
+
+---
+
 # Converting Between Number Systems (数制转换)
-## From all bases to decimal：
-To convert a number from any base to decimal, multiply each digit by its base raised to the power of its position (counting from right to left, starting at 0), and then sum the results.
-For example, to convert the binary number 1001 to decimal:
-| 2^3 | 2^2 | 2^1 | 2^0 |
-|-----|-----|-----|-----|
-|  1  |  0  |  0  |  1  |
-= 1*2^3 + 0*2^2 + 0*2^1 + 1*2^0 
-= 8 + 0 + 0 + 1 = 9 (decimal)
-To convert the hexadecimal number 1A3 to decimal:
-| 16^2 | 16^1 | 16^0 |
-|------|------|------|
-|  1   |  A   |  3   |
-= 1*16^2 + 10*16^1 + 3*16^0 
-= 256 + 160 + 3 = 419 (decimal)
-## From decimal to other bases：
-To convert a decimal number to another base, repeatedly divide the number by the new base and record the remainders. The remainders, read in reverse order, give the number in the new base.
-For example, to convert the decimal number 45 to binary:
-| 2 | 45 | 1 |
-|   | 22 | 0 |
-|   | 11 | 1 |
-|   | 5  | 1 |
-|   | 2  | 0 |
-|   | 1  | 1 |
-|   | 0  |   |
 
-Reading the remainders in reverse order gives 101101 (binary).
-To convert the decimal number 514 to hexadecimal:
-| 16 | 514 | 2 |
-|    | 32  | 0 |
-|    | 2   | 2 |
-|    | 0   |   |
+## Converting Any Base to Decimal
 
-Reading the remainders in reverse order gives 202 (hexadecimal).
+Multiply each digit by its base raised to the power of its position (right to left, starting at 0), then sum the results.
 
-Or, using table, for 45(decimal):
-64 | 32 | 16 | 8 | 4 | 2 | 1
----|----|----|---|---|---|---
- 0 |  1 |  0 | 1 | 1 | 0 | 1
- 45 = 32 + 8 + 4 + 1 = 101101 (binary)
-For 514(decimal):
-256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
-----|-----|----|----|----|---|---|---|---
- 2  |  0  | 2  | 0  | 0  | 0 | 2 | 0 | 0
-514 = 2*256 + 2*2 = 202 (hexadecimal)
-I prefer the table method.
+**Example: Binary 1001 to Decimal**
+
+| 2³ | 2² | 2¹ | 2⁰ |
+|----|----|----|----|
+|  1 |  0 |  0 |  1 |
+
+Calculation:  
+1×2³ + 0×2² + 0×2¹ + 1×2⁰ = 8 + 0 + 0 + 1 = **9 (decimal)**
+
+**Example: Hexadecimal 1A3 to Decimal**
+
+| 16² | 16¹ | 16⁰ |
+|-----|-----|-----|
+|  1  |  A  |  3  |
+
+Calculation:  
+1×16² + 10×16¹ + 3×16⁰ = 256 + 160 + 3 = **419 (decimal)**
+
+---
+
+## Converting Decimal to Other Bases
+
+Repeatedly divide the decimal number by the target base, recording remainders. Read the remainders in reverse order.
+
+**Example: Decimal 45 to Binary**
+
+| Division | Quotient | Remainder |
+|----------|----------|-----------|
+| 45 ÷ 2   |   22     |     1     |
+| 22 ÷ 2   |   11     |     0     |
+| 11 ÷ 2   |    5     |     1     |
+| 5 ÷ 2    |    2     |     1     |
+| 2 ÷ 2    |    1     |     0     |
+| 1 ÷ 2    |    0     |     1     |
+
+Reading remainders in reverse: **101101 (binary)**
+
+**Example: Decimal 514 to Hexadecimal**
+
+| Division | Quotient | Remainder |
+|----------|----------|-----------|
+| 514 ÷ 16 |   32     |     2     |
+| 32 ÷ 16  |    2     |     0     |
+| 2 ÷ 16   |    0     |     2     |
+
+Reading remainders in reverse: **202 (hexadecimal)**
+
+---
+
+### Table Method (Preferred)
+
+**45 (decimal) to Binary:**
+
+| 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|----|----|----|---|---|---|---|
+|  0 |  1 |  0 | 1 | 1 | 0 | 1 |
+
+45 = 32 + 8 + 4 + 1 = **101101 (binary)**
+
+**514 (decimal) to Hexadecimal:**
+
+| 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-----|-----|----|----|----|---|---|---|---|
+|  2  |  0  |  2 |  0 |  0 | 0 | 2 | 0 | 0 |
+
+514 = 2×256 + 2×2 = **202 (hexadecimal)**
