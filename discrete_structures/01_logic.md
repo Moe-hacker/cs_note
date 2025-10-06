@@ -79,6 +79,13 @@ Example:
 Example:  
 Negation of “∀x (is_even(x) → is_integer(x))” is “∃x (is_even(x) ∧ ¬is_integer(x))”
 
+# Universal Instantiation (全称实例化)
+
+From “∀x P(x)”, we can infer “P(c)” for any specific instance c.
+
+# Existential Generalization (存在实例化)
+From “∃x P(x)”, we can infer “P(c)” for some specific instance c.
+
 # Modus Tollens (否定后件)
 
 A valid argument form:
