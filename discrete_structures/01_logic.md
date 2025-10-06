@@ -67,7 +67,9 @@ Example: “is_even(x)” returns true if x is even.
 - **Existential quantifier** (∃, 存在量词): “∃x P(x)” means “there exists an x such that P(x) is true.”
 
 Example:  
-“∀x (is_even(x) → is_integer(x))” means “for all x, if x is even, then x is an integer.”
+“∀x (is_even(x) → is_integer(x))” means “for all x, if x is even, then x is an integer.”  
+“∀x(Lecture(x) → ∃y Teaches(y, x))” means “Every lecture teaches at least one subject.”
+
 
 # Negation of Quantifiers (量词的否定)
 
