@@ -47,3 +47,14 @@ public class x {
 Sleepy..........
 I'm sleepy for java!!!!!!!!!
 I need rust, though I'm C guy QwQ
+# Mathmatical operations
+Same as C, nothing to note........
+Sleepy QwQ
+# Type casting:
+## Implicit type casting
+double > float > long > int > char > short > byte
+This is also called type widening, which is always safe.
+## Explicit type casting
+int a = (int)3.0; // a = 3 (Type narrowing)
+int i = (int)3.9; // i = 3 (Truncation)
+Type narrowing may cause truncation or overflow, this is not always safe.

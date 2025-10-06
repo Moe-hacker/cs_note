@@ -47,7 +47,8 @@ git add .
 while true; do
   CMSG=$(./cmsg.py || echo "up")
   cprintf "{blue}Commit message: {green}$CMSG\n{reset}"
-  read -p "Do you like this one? (y/n) " yn
+  cprintf "{blue}Are you sure to commit with this message? (y/n) {reset}"
+  read -r yn
   case $yn in
   [Yy]*) break ;;
   [Nn]*) continue ;;
